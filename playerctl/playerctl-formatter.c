@@ -596,11 +596,11 @@ static GVariant *helperfn_emoji(struct token *token, GVariant **args, int nargs,
         if (pctl_parse_playback_status(status_str, &status)) {
             switch (status) {
             case PLAYERCTL_PLAYBACK_STATUS_PLAYING:
-                return g_variant_new("s", "▶️");
+                return g_variant_new("s", "");
             case PLAYERCTL_PLAYBACK_STATUS_STOPPED:
-                return g_variant_new("s", "⏹️");
+                return g_variant_new("s", "");
             case PLAYERCTL_PLAYBACK_STATUS_PAUSED:
-                return g_variant_new("s", "⏸️");
+                return g_variant_new("s", "");
             }
         }
     } else if (g_strcmp0(key, "volume") == 0 &&
